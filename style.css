@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e9ebed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    overflow-x:hidden;
+}
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: url('https://picsum.photos/id/1015/1200/800');
+    background-size:cover;
+    background-position:center;
+    opacity:0.12;
+    z-index:-1;
+    filter: blur(2px);
+}
+header{
+    width:100%;
+    max-width:1000px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+    padding:15px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+header h1{
+    font-size:2rem;
+    background: linear-gradient(90deg,#38bdf8,#818cf8,#f472b6);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+header p{
+    font-size:0.85rem;
+    color:#cbd5e1;
+    margin-top:5px;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:12px;
+}
+
+nav button{
+    border:none;
+    padding:10px 18px;
+    border-radius:25px;
+    background: linear-gradient(135deg,#3b82f6,#8b5cf6);
+    color:white;
+    cursor:pointer;
+    transition: all .3s ease;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav button:hover{
+    transform: translateY(-4px) scale(1.03);
+}
+
+/* PAGE */
+.page{
+    display:none;
+    animation: fadeUp .5s ease;
+    width:100%;
+}
+
+.page.active{
+    display:block;
+}
+.card{
+    width:85%;
+    max-width:600px;
+    margin:15px auto;
+    padding:18px;
+    border-radius:18px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border:1px solid rgba(255,255,255,0.1);
+    transition: transform .3s ease;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+}
+h2{
+    font-size:1.4rem;
+    margin-bottom:10px;
+    color:#38bdf8;
+    text-align:center;
+}
+input{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    margin-bottom:10px;
+    font-size:14px;
+    outline:none;
+    background: rgba(255,255,255,0.08);
+    color:white;
+}
+button.action{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:10px;
+    background: linear-gradient(135deg,#06b6d4,#3b82f6);
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+    transition: all .3s ease;
+}
+
+button.action:hover{
+    transform: scale(1.05);
+}
+#options button{
+    width:100%;
+    margin:6px 0;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+#options button:hover{
+    background:#3b82f6;
+}
+.correct{
+    background:#16a34a !important;
+}
+
+.wrong{
+    background:#dc2626 !important;
+}
+.image-container {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.responsive-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .responsive-img {
+    transform: scale(1.08);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    background: rgba(255,255,255,0.05);
+    padding: 1rem;
+    border-radius: 12px;
+}
+.cta-btn {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+@media(max-width:768px){
+    header h1{
+        font-size:1.6rem;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav button{
+        width:90%;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaDeck | Smart Web Matrix </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>NexHub Workspace</h1>
+    <p>Interactive Quiz • Smart Jokes • Live Weather Dashboard</p>
+</header>
+<nav>
+    <button onclick="showPage('home')">🏠 Home</button>
+    <button onclick="showPage('weather')">🌦 Weather</button>
+    <button onclick="showPage('quiz')">📝 Quiz</button>
+    <button onclick="showPage('jokePage')">😂 Joke</button>
+</nav>
+
+<section id="home" class="page active">
+
+    <div class="card">
+
+        <div class="home-content">
+
+            <h2>Welcome</h2>
+            <div class="home-content">x
+            <div class="image-container">
+                <img src="https://picsum.photos/id/1015/900/400"
+                 alt="Home Banner"
+                 class="responsive">
+            </div>
+
+            <p class="subtitle">
+                Practice Quiz, Check Weather and Enjoy Random Jokes.
+            </p>
+
+            <div class="features-grid">
+
+                <div class="feature-item">
+                    <div class="icon">🌦</div>
+                    <h3>Weather</h3>
+                    <p>Live weather information.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon">📝</div>
+                    <h3>Quiz</h3>
+                    <p>Test your programming knowledge.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon">😂</div>
+                    <h3>Jokes</h3>
+                    <p>Generate unlimited random jokes.</p>
+                </div>
+
+            </div>
+
+            <button class="cta-btn"
+                onclick="showPage('quiz')">
+                Start Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="weather" class="page">
+
+    <div class="card">
+
+        <div class="image-container">
+            <img src="https://picsum.photos/id/1018/800/400"
+                 class="responsive-img">
+        </div>
+
+        <h2>🌦 Weather App</h2>
+
+        <input
+            type="text"
+            id="city"
+            placeholder="Enter city name">
+
+        <button class="action"
+            onclick="getWeather()">
+            Get Weather
+        </button>
+
+        <div id="weatherResult"></div>
+
+    </div>
+
+</section>
+
+<section id="quiz" class="page">
+
+    <div class="card">
+
+        <div class="image-container">
+            <img src="https://picsum.photos/id/180/800/400"
+                 class="responsive-img">
+        </div>
+
+        <h2>Programming Quiz</h2>
+
+        <h3 id="questionNo"></h3>
+
+        <h3 id="question"></h3>
+
+        <div id="options"></div>
+
+        <button
+            id="nextBtn"
+            class="action"
+            onclick="nextQuestion()">
+            Next Question
+        </button>
+
+    </div>
+
+</section>
+
+<section id="jokePage" class="page">
+
+    <div class="card">
+
+        <div class="image-container">
+
+            <img
+                id="jokeImage"
+                src="https://picsum.photos/800/400"
+                class="responsive-img">
+
+        </div>
+
+        <h2>😂 Random Joke</h2>
+
+        <button
+            class="action"
+            onclick="getJoke()">
+            Generate Joke
+        </button>
+
+        <div id="joke"></div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
