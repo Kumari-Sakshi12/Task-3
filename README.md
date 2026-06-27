@@ -84,7 +84,7 @@ This project uses the OpenWearger API to fetch real-time weather information.
 
  const apiKey = "YOUR_APi_KEY";
 
-Get your free API key from: https//openweather.org/api
+Get your free API key from: https://openweathermap.org/api
 
 ###Official Joke API
 
