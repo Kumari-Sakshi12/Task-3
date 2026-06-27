@@ -177,9 +177,7 @@ async function getWeather() {
     }
 
     // Apni OpenWeather API Key yahan paste karo
-    const apiKey = "f1691fe83e07b2dfa867073cd806d71c";
-
-
+    const apiKey = "YOUR_API_KEY";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     result.innerHTML = "<p>Loading...</p>";
